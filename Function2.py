@@ -21,3 +21,4 @@ def give_award(medal, *persons):
 
 give_award("Za berlin", "Vasya", "Petya")
 give_award("Za lenina", "Grisha", "Vasya", "Petya")
+
