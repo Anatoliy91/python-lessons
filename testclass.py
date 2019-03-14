@@ -46,3 +46,4 @@ print(mypeople.__dict__)
 
 mysuperpeople.people_add_weight()
 print(mysuperpeople.__dict__)
+
