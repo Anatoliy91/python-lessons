@@ -27,3 +27,6 @@ mysuperpeople.showninfoaboutpeople()
 
 mypeople = people("vasya", "petrovich", "120", "160")
 mypeople.showninfoaboutpeople()
+
+
+#comment
