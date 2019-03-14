@@ -1,4 +1,4 @@
-for x in range(-100,100+1, 2):
+for x in range(-100,100, 2):
     print("Number x = "+str(x))
     if x == 50:
         break
@@ -10,5 +10,5 @@ x=0
 while True:
     print(x)
     x = x+1
-    if x == 100:
+    if x == 10:
         break
