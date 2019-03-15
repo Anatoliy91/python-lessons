@@ -40,7 +40,3 @@ for xxxx in all_cars:
         print(xxxx + " is german car")
     else:
         print(xxxx + " not german car")
-
-
-
-
