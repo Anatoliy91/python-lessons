@@ -1,3 +1,9 @@
+import list3
+a,b = list3.uniq([], [1,5,34,5,345,34,34,34,53,5,3])
+print(a)
+print(b)
+
+
 #def napechatat_privetstvie(name):
 #    """"print privetstvie"""
 #    print("congratulation wish you " + name)
