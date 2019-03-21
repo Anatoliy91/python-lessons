@@ -15,5 +15,3 @@ c = a+b
 print(c)
 s = []
 for x in c:
-    if c[i] == c[+1]:
-    s = c.remove(x)
