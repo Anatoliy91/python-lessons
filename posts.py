@@ -2,6 +2,7 @@ import json
 import requests
 import random
 
+
 def post_default_request(url, data, headers):
     # метод делает пост запрос и возвращает полностью весь респонс
     response = requests.post(url=url, data=data, headers=headers)
@@ -9,14 +10,14 @@ def post_default_request(url, data, headers):
 
 
 def default_dict_to_json(di):
-     jsondata = json.dumps(di)
-     # этот метод превращает дикт в Джейсон. Возвращает джецсон
-     return jsondata
+    jsondata = json.dumps(di)
+    # этот метод превращает дикт в Джейсон. Возвращает джецсон
+    return jsondata
 
 
-def default_json_to_dict(json):
+def default_json_to_dict(json_data):
     # этот метод парсит Джейсон и возвращает дикт
-    dict_data = json.loads(json)
+    dict_data = json.loads(json_data)
     return dict_data
 
 
@@ -34,7 +35,7 @@ def get_random_password():
 
 def get_random_email():
     # возвращает рандомны емейл
-    email = "dubinaanatolii"+ str(random.randint(100,1000)+"@gmail.com")
+    email = "dubinaanatolii" + str(random.randint(100, 1000) + "@gmail.com")
     return email
 
 
@@ -50,23 +51,31 @@ def get_baseurl(env):
         return "https://qa.apikantoo.com"
 
 
-
 def test_check_resp():
-    body = {"productID": "disneystorytime-pt",
-         "deviceID": "12345",
-         "appUserID": "201925113016611462719",
-         "registrationType": 2,
-         "email": "dubinaanatolii" + str(random.randrange(1,11000)) + "@gmail.com",
-         "password": "Yakov05042018"
-    }
+    body = {"productID": "disneystorytime",
+            "deviceID": "12312313123",
+            "ipAddress": "1.33.213.199",
+            "appVersion": "1.01",
+            "platform": "123",
+            "deviceModel": "asda",
+            "deviceOS": "123",
+            "appUserID": "{{appUserID}}",
+            "registrationType": 0
+
+            }
     body_json = default_dict_to_json(body)
     headers = get_headers()
-    headers_json = default_dict_to_json(headers)
-    url = get_baseurl('btb-prod') + "/appuser/loginregular"
-    resp = post_default_request(url=url, data=body_json, headers=headers_json)
+    #  headers_json = default_dict_to_json(headers)
+    url = get_baseurl('btb-qa') + "/appuser/launchapplication"
+    resp = post_default_request(url=url, data=body_json, headers=headers)
     text_data = default_json_to_dict(resp.text)
-    if text_data["appUserID"] =="201925113016611462719":
-        print("True")
+    print(resp)
+    print(text_data)
+    if text_data["appUserID"] == "20192262651252483124":
+         print("True")
+    else:
+        print("False")
+    return resp
+
 
 test_check_resp()
-# дальше проверки
