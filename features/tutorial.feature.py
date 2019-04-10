@@ -184,7 +184,7 @@ def test_check_resp1():
     check_failereason(text_data2)
     assert text_data2["failureReason"] == 3
 
-
+@given('we can launch application')
 def test_check_resp2():
     body = default_body("disneystorytime", "123", "1.33.213.199", "123", "iOS", "SGS S6", "Andr")
     body_json = default_dict_to_json(body)
@@ -233,7 +233,7 @@ def test_check_resp2():
     check_failereason(text_data1)
     check_failereason(text_data2)
     assert text_data1["failureReason"] == 0
-    assert 
+
 test_check_resp()
 
 test_check_resp2()
