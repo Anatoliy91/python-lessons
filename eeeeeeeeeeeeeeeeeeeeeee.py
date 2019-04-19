@@ -159,3 +159,4 @@ def test_create_сard():
     #assert t2 == [{'Id': 1, 'MapId': 0, 'Name': 'Все'}, {'Id': 10, 'MapId': 0, 'Name': 'Еда и напитки'}, {'Id': 20, 'MapId': 0, 'Name': 'Развлечения'}, {'Id': 30, 'MapId': 0, 'Name': 'Авто'}, {'Id': 40, 'MapId': 0, 'Name': 'Мода'}, {'Id': 45, 'MapId': 0, 'Name': 'Здоровье'}, {'Id': 50, 'MapId': 0, 'Name': 'Электроника'}, {'Id': 60, 'MapId': 0, 'Name': 'Красота'}, {'Id': 70, 'MapId': 0, 'Name': 'Детям'}, {'Id': 80, 'MapId': 0, 'Name': 'Дом'}, {'Id': 100, 'MapId': 0, 'Name': 'Другое'}]
 
 test_create_сard()
+
